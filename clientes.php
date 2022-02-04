@@ -21,9 +21,10 @@
   </head>
   <body>
    
-    <h1>Clientes Cadastrados</h1>
+    
 
     <div class="container">
+    <h1>Clientes Cadastrados</h1>
         <a href="frmcliente.php" class="btn btn-primary mb-3">Novo Cliente</a>
         <table class="table table-success table-striped table-hover">
             <thead>
@@ -50,8 +51,8 @@
                     <th><?php echo $linha['telefone']; ?></th>
                     <th><?php echo $linha['endereco']?></th>
                     <th><img src="<?php echo $linha['foto']?>" width="75px" height="75px" alt=""></th>
-                    <th><a href="frmcliente.php?idcliente=<?php echo isset($linha['idcliente'])? $linha['idcliente']: null; ?>"> Editar</a></th>
-                    <th><a href="frmcliente.php?op=del&&idcliente=<?php echo isset($linha['idcliente'])? $linha['idcliente']: null; ?>"> Excluir</a></th>
+                    <th><a href="frmcliente.php?idcliente=<?php echo isset($linha['idcliente'])? $linha['idcliente']: null; ?>" class="btn btn-success btn-sm"> Editar</a></th>
+                    <th><a href="frmcliente.php?op=del&idcliente=<?php echo isset($linha['idcliente'])? $linha['idcliente']: null; ?>" class="btn btn-danger btn-sm"> Excluir</a></th>
                 </tr>
             <?php } ?>
             </tbody>
@@ -60,7 +61,13 @@
         </table>
 
     </div>
-
+<!--Inicio Footer-->
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Desenvolvido por Marcos Gonçalves. 2022</span>
+  </div>
+</footer>
+<!--Fim Footer-->
 
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
